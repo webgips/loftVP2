@@ -1,0 +1,36 @@
+//mixins
+@mixin clearfix {
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}//  @include clearfix;
+
+
+//colors
+$orange: #e45028;
+$yellow: #f9b43b;
+$black: #2f3234;
+$red: #e35028;
+
+//setup
+@import "all.scss";
+
+body #fancybox-wrap { position: fixed; }
+
+//fonts
+@import "fonts.scss";
+
+//sections
+@import "sections/welcome.scss";
+@import "sections/webest.scss";
+@import "sections/burgers.scss";
+@import "sections/team.scss";
+@import "sections/menu.scss";
+@import "sections/reviews.scss";
+@import "sections/order.scss";
+@import "sections/map.scss";

@@ -1,0 +1,86 @@
+.team{
+	background: url(../content//team-bg.jpg) center center no-repeat;
+	background-size: cover;
+	position: relative;
+	text-align: center;
+}
+
+.team__container{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 50%;	
+  	background: rgba(47, 50, 52, 0.93);
+  	height: 100%;
+  	padding: 5% 2% 0% 5%;
+ 
+}
+
+.team .section__title{
+	margin-bottom: 10%;
+	text-align: left;
+}
+
+.team-acord__item{
+	text-align: left;
+    display: block;
+    margin-bottom: 35px;
+    &.active .team-acord__trigger{
+	color: $yellow;
+	&:before{
+		transform: rotate(-180deg);
+	}
+}
+.team-acord__trigger {
+	color: white;
+	position: relative;
+	font-family: 'gagalinregular';
+	font-size: 14px;
+	&:before{
+		display: block;
+		content: "";
+		position: absolute;
+		top: 5px;
+		left: -20px;
+		border-top: 7px solid $yellow;
+    	border-left: 5px solid transparent;
+    	border-right: 5px solid transparent;
+    	border-bottom: 0px solid transparent;
+    	transition: .4s;
+    }    
+}
+
+	
+}
+.team-acord__content{
+	@include clearfix;
+	margin-top: 20px;
+	display: none;
+}
+.team-acord__photo{	
+	float: left;
+	width: 30%;		
+}
+.photo__wrap{
+	background: url(../content/team1.jpg) center no-repeat;
+	background-size: cover;
+	border-radius: 50%;
+	width: 90px;
+	height: 90px;
+	overflow: hidden;
+	margin-left: 30%;
+}
+.team-acord__discr{
+	float: right;
+	width: 70%
+}
+
+.team-acord__title, .team-acord__text{
+	font-size: 14px;
+	color: white;
+}
+.team-acord__title{
+	font-family: 'ubuntubold';
+	margin-bottom: 14px;
+}

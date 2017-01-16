@@ -1,0 +1,30 @@
+.webest{
+	background: url(../content/webest-bg.jpg) center center no-repeat;
+	background-size: cover;
+	position: relative;
+	text-align: center;
+}
+.webest .container{
+	position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.webest .section__title{
+	margin-bottom: 70px;
+}
+.webest__item{
+	display: inline-block;
+	width: 33%;
+	vertical-align: top;
+}
+.webest__title{
+	color: $black;
+	font-size: 24px;
+	font-family: 'lifehackmedium';
+	margin-bottom: 20px;
+}
+.webest__text{
+	color:$black;
+	font-size: 14px;
+}

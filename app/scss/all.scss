@@ -1,0 +1,151 @@
+html,body{
+    height: 100%;
+    width: 100%;
+}
+body{	
+    line-height: 1.42;
+    font-size: 16px;    
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    font-family: 'ubuntulight';
+    color: #2f3234;    
+}
+
+
+*{
+    box-sizing: border-box;
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+.wrapper{	
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    min-width: 960px; 
+}
+
+.maincontent{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform: translate3d (0,0,0);
+       -moz-transform: translate3d (0,0,0);
+        -ms-transform: translate3d (0,0,0);
+         -o-transform: translate3d (0,0,0);
+            transform: translate3d (0,0,0);
+    transition: 1s;
+}
+.section{
+    height: 100vh;
+    min-height: 640px;
+}
+.container{
+    margin: 0 auto;
+    position: relative;
+    width: 940px;
+}
+.section__title{
+  font-size: 72px;
+  font-family: "gagalinregular";
+  color: $yellow; 
+  &-black{
+    color:$black;
+  }
+  &-white{
+    color:#fff;
+  }
+}
+.btn{    
+  border-radius: 5px;
+  background-color: $red;  
+  padding: 9px 16px;
+  font-size: 13px;
+  font-family: "ubuntumedium";
+  text-align: center;
+  color:white;
+  text-transform: uppercase;
+}
+
+.main-menu{
+    position: fixed;
+    top: 90px;
+    right: 50px;        
+}
+.main-menu__item{
+    margin-bottom: 10px;
+}
+
+.main-menu__link {
+    display: block;   
+    height: 16px;
+    width: 16px;    
+    position: relative;    
+    &:before{
+            content: "";
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 14px;
+            height: 14px;
+            border: 1px solid #fff;
+            opacity: 0;            
+            border-radius: 50%;            
+            transition: .3ms;
+    }
+    &:after{
+        content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 6px;
+            height: 6px;            
+            border-radius: 50%;
+            background-color: white;
+    }
+    &:hover:before{
+        display: block;
+        opacity: 1;
+    } 
+}
+
+.main-menu__item.active .main-menu__link:before{
+        display: block;
+        opacity: 1; 
+}
+
+.popup{
+    display: none;
+}
+.status-popup__inner {
+  padding: 20px;
+  text-align: center;
+}
+
+.status-popup__message {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.status-popup {
+  width: 240px;
+}
+
+.error-message {
+  color: #e35028;
+}

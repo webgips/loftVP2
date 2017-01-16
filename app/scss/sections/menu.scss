@@ -1,0 +1,70 @@
+.menu{
+	background: url(../content/menu-bg.jpg) center no-repeat ;
+	background-size: cover;
+	position: relative;	
+}
+
+.menu__title{
+	color: white;
+	position: absolute;
+    top: 10%;
+    left: 10%;
+}
+.menu-acord{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	@include clearfix;
+}
+.menu-acord__item{
+	float: left;
+	height: 100%;    	
+	
+    &.active .menu-acord__trigger-text{
+        color: $yellow;
+    }
+}
+
+.menu-acord__trigger{
+	width: 80px;
+    display: block;
+    height: 100%;
+    float: left;
+    text-decoration: none;
+    position: relative;
+    background-size: cover;
+	background-position: center center;
+    background-repeat: no-repeat;    
+}
+
+.menu-acord__trigger-text{
+	font-size: 40px;
+    color: #fff;
+    font-family: 'gagalinregular';
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    text-align: center;
+    white-space: nowrap;
+    width: 650px;
+    height: 80px;
+    position: absolute;
+    top: 50%;
+    left: -275px;
+    margin-top: -40px;
+}
+.menu-acord__content{
+	height: 100%;
+    float: left;
+    background: rgba(47, 50, 52, 0.93);
+    width: 0;
+    overflow: hidden;    
+}
+.menu-acord__text{
+	font-family: 'ubuntulight';
+    font-size: 14px;
+    color: #fff;
+    padding: 60px 30px;
+    width: 550px;
+    line-height: 1.8;
+}

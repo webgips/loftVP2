@@ -1,0 +1,105 @@
+
+.welcome{
+	background: url(../content/main-bg.jpg) center center no-repeat;
+	background-size: cover;
+	position: relative;
+}
+.welcome .container{
+	position: static;
+}
+.welcome__container{
+	position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+}
+.header{
+	padding-top: 12px;
+	@include clearfix;
+}
+.header__logo{
+	float: left;
+	width: 30%;
+}
+.header__menu{
+	float: left;
+	width: 70%;
+	text-align: right;
+	padding-top: 12px;
+}
+.nav{
+	width: 82%;
+	display: inline-block;
+	vertical-align: middle;
+}
+.nav__list{
+	display: block;
+	@include clearfix;
+}
+.nav__item{		
+	white-space: nowrap;
+    margin-right: 15px;
+    display: block;
+    float: left;
+    &:after{
+    	content: "";
+	    display: inline-block;
+	    vertical-align: middle;
+	    width: 4px;
+	    height: 4px;
+	    border-radius: 50%;
+	    background: white;
+	    margin-left: 15px;
+    }
+    &:last-child:after{
+    	display: none;
+    }
+    &:hover .nav__link{
+    	text-decoration: underline;
+    }
+}
+.nav__link{
+	display: inline-block;
+    vertical-align: middle;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    font-family: 'ubuntumedium';
+}
+.order-link{
+	width: 15%;
+	display: inline-block;
+}
+.welcome__content{
+	@include clearfix;
+}
+.welcome__left, .welcome__right{
+	float: left;
+	width: 50%;
+}
+.welcome__right{
+	margin-top: 100px;
+}
+.welcome__discr{
+	color: #fff;
+	font-size: 65px;
+	font-family: 'lifehackmedium';
+	text-transform: lowercase;
+	line-height: 1em;
+}
+.arrow-down{
+	position: absolute;
+    right: 50%;
+    bottom: 30px;
+    & svg{
+    	transition: .3s;
+    }    
+    &:hover svg{
+    	margin-top: -15px;
+   		width: 35px;
+    	height: 35px;
+    }
+}

@@ -1,0 +1,150 @@
+.order{
+	background: url(../content/order-bg.jpg) center center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.order .container{
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.order .section__title{
+	text-align: center;
+	margin-bottom: 80px;
+}
+.order__form{
+	@include clearfix;
+}
+.order__form-left, .order__form-right{
+	float: left;
+	width: 45%;
+    margin-left: 5%;
+}
+.form__row{
+	@include clearfix;
+	margin-bottom: 20px;
+	.form__row-block{
+		display: inline-block;
+		float: left;
+		margin-left: 20px;
+		&:first-child{
+			margin-left: 0;
+		}
+	}
+	&.col1 .form__row-block{
+		width: calc(100% - 20px);
+	}
+	&.col2 .form__row-block{
+		width: calc(100%/2 - 20px);	
+	}
+	&.col4 .form__row-block{
+		width: calc(100%/4 - 20px);
+	}	
+}
+.block__title{
+	display: block;
+	color: white;
+	font-family: 'ubuntulight';
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+.form__input{
+	width: 100%;
+	font-size: 14px;    
+    padding: 8px 12px;
+    border: 1px solid #d1cfcb;
+    border-radius: 5px;
+}
+.form__ta{
+	height: 110px;
+	width: 100%;
+	resize: none;
+	padding: 5px 10px;
+    border: 1px solid #d1cfcb;
+    border-radius: 5px;
+}
+.form__radio{
+	position: relative;
+}
+.radio,.checkbox{
+	position: absolute;
+	left: -9999px;
+}
+.form__radio-btn{
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+	position: relative;
+	display: inline-block;
+	border-radius: 50%;
+	background-color: white;
+	&:after{
+		content: "";
+		display: block;
+		width: 0px;
+		height: 0px;
+		position: absolute;
+		top: 50%;
+  		left: 50%;
+  		-webkit-transform: translate(-50%, -50%);
+  		transform: translate(-50%, -50%);
+		border-radius: 50%;
+		background-color: $red;
+		transition: .3s;	
+	}
+}
+.radio:checked + .form__radio-btn:after{
+	width: 8px;
+	height: 8px;
+}
+.form__check{
+	display: inline-block;
+	width: 16px;
+    height: 16px;    
+    background: #fff;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;    
+    &:after{
+		content: "";
+  		display: block;
+  		position: absolute;
+  		width: 0px;
+  		height: 0px;  		
+  		top: 50%;
+  		left: 50%;
+  		-webkit-transform: translate(-50%, -50%);
+  		transform: translate(-50%, -50%);
+  		transition: .3s;
+    }
+}
+.checkbox:checked + .form__check:after{
+  background: url("../content/icons/check.svg") center no-repeat;
+  background-size: contain; 
+  width: 11px;
+  height: 9px;
+}
+
+.form__radio{
+	margin-right: 20px;
+}
+.form__radio-title{
+	display: inline-block;
+	color: white;
+	font-family: 'ubuntulight';
+	font-size: 14px;
+}
+.form__submit{
+	display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+    border: 0;
+}
+.form__reset{
+	border: 0;
+    background-color: transparent;
+    color: white;
+    font-family: 'ubuntulight';
+	font-size: 14px;
+}

@@ -1,0 +1,56 @@
+.yandex-map{
+	height: calc(100% - 60px);
+}
+
+.footer{
+	background: url(../content/footer.jpg) center bottom no-repeat;
+	height: 60px;
+	background-size: cover;
+}
+.footer__left,.footer__right{
+	float: left;
+	width: 50%;
+	padding: 8px 0;
+}
+.footer__right{
+	text-align: right;
+	padding: 20px 0 0 0;
+	
+}
+.footer__address{
+	font-family: 'ubuntulight';
+	font-size: 14px;
+	color:white;	
+}
+.footer__tel{
+	color:$red;
+	font-family: 'ubuntubold';
+	font-size: 14px;
+	&:before{
+		content: "";
+		width: 11px;
+		height: 11px;
+		display: inline-block;
+		margin-right: 8px;
+		background: url(../content/icons/phone.svg) center no-repeat;
+	}
+}
+
+.socials__item{
+	display: inline-block;	
+	margin-left: 10px;
+}
+.socials__link{
+	display: inline-block;
+    
+    opacity: .3;
+    -webkit-transition: .3s;
+    transition: .3s;    
+    svg{
+    	width: 20px;
+    	height: 20px;
+    }
+    &:hover{
+    	opacity: 1;
+    }
+}

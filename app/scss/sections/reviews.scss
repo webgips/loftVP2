@@ -1,0 +1,101 @@
+.reviews{
+
+}
+.reviews__list{
+	height: 100%;
+}
+.reviews__item{
+	float: left;
+	width: 25%;
+	height: 50%;
+}
+.review{
+	position: relative;
+    width: 100%;
+    height: 100%;
+    &:hover .review__hover{		
+    	transform: translate(-50%, -50%) scale(1);    	
+    	opacity: 1;    		
+ 	}    
+}
+
+.review__photo{
+	width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+
+}
+.review__hover{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	height: 100%;
+	padding: 12% 8% 0;
+	background: rgba(20, 20, 20, 0.7);
+	transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
+    transition: .3s;
+}
+.review__title{
+	font-size: 14px;
+	font-family: 'gagalinregular';
+	color: white;
+	margin-bottom: 32px;
+}
+.review__text{
+	color: white;
+	font-size: 14px;
+	font-family: 'ubuntulight';
+	margin-bottom: 20px;
+}
+.review__button{
+	color: white;
+  	border-radius: 5px;
+  	background-color: $black;
+ 	padding: 8px 12px;
+    display: inline-block;
+    font-family: 'ubuntumedium';
+    font-size: 12px;
+    text-transform: uppercase;
+    transition: .3s;    
+    &:hover{
+     background-color: #1f2122;   
+  }  
+}
+
+.review__full{
+	padding: 30px 20px;
+    position: relative;
+    display: none;
+    &-close{
+		position: absolute;
+	    width: 15px;
+    	height: 15px;
+    	display: block;
+        right: 20px;
+    	top: 20px;
+    	opacity: .7;
+    	transform: scale(.8);
+    	-webkit-transition: .3s;
+    	transition: .3s;
+    	&:hover{
+    		opacity: 1;
+    		transform: scale(1);
+    	}
+    }
+    &-title{
+    	font-family: 'gagalinregular';
+    	font-size: 14px;
+    	text-transform: uppercase;
+    	margin-bottom: 30px;
+    }
+    &-content{
+    	font-family: 'ubuntulight';
+    	font-size: 14px;
+    }
+}
