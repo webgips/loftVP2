@@ -200,25 +200,21 @@ $(function () {
  	 })
 
  });
-
 //form submit
 $(function() {
 	$('#order__form').on('submit',function(e){
 		e.preventDefault();
 		var form = $(this),
-			formData= form.serialize();			
+			formData=form.serialize();			
 		 $.ajax({
 		 	url: '../mail.php',
 		 	type: 'POST',		 	
 		 	data: formData,
-		 	success: function(data) {
-		 		console.log(data);
-		 		var popup= data.status ? '#success' : '#error',
-		 			popup = '#success';
-
-
+		 	success: function(data) {		 		
+		 		data = jQuery.parseJSON(data);
+		 		var popup= data.status ? '#success' : '#error';
 		 		$.fancybox.open([
-		 				{href:popup}
+		 				{href: popup}
 		 				],{
 		 					type : 'inline',
 		 					maxWidth: 250,
@@ -239,6 +235,8 @@ $(function() {
 		$.fancybox.close();
 	});
 });
+
+
 
 //yandex map
 $(function () {
